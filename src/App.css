@@ -355,7 +355,9 @@ body.dark .toggle-theme-btn:hover {
   letter-spacing: 0.5px;
   font-weight: bold;
 }
-
+.github-icon{
+  text-decoration: none;
+}
 .top {
   background: #58bc82;
   color: #fff;
