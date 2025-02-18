@@ -357,6 +357,7 @@ body.dark .toggle-theme-btn:hover {
 }
 .github-icon{
   text-decoration: none;
+  color: white;
 }
 .top {
   background: #58bc82;
