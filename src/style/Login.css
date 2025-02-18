@@ -1,0 +1,171 @@
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --form-bg: #ffffff;
+  --button-bg: #007bff;
+  --button-hover: #0056b3;
+  --switch-bg: #ddd;
+  --switch-thumb: #ffffff;
+}
+
+.dark-theme {
+  --bg-color: #181818;
+  --text-color: #f4f4f4;
+  --form-bg: #222;
+  --button-bg: #ff9800;
+  --button-hover: #e68900;
+  --switch-bg: #444;
+  --switch-thumb: #ff9800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-color);
+  transition: background 0.3s ease-in-out;
+}
+body.light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+body.dark {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+.form {
+  --bg-light: #efefef;
+  --bg-dark: #707070;
+  --clr: #58bc82;
+  --clr-alpha: #9c9c9c60;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  width: 24rem;
+  background-color: var(--bg-light);
+  border-radius: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.input-span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form input[type="email"],
+.form input[type="password"] {
+  border-radius: 0.5rem;
+  padding: 0.9rem 1rem;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  background-color: var(--clr-alpha);
+  outline: 2px solid var(--bg-dark);
+  transition: outline-color 0.3s;
+}
+
+.form input[type="email"]:focus,
+.form input[type="password"]:focus {
+  outline: 2px solid var(--clr);
+  background-color: #fff;
+}
+
+.label {
+  align-self: flex-start;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--clr);
+}
+
+.submit {
+  padding: 1rem;
+  width: 100%;
+  border-radius: 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  background-color: var(--bg-dark);
+  color: var(--bg-light);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.submit:hover {
+    background-color: var(--clr);
+    color: var(--bg-dark);
+}
+
+.welcome-message {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+
+.welcome-message.light {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-message.dark {
+    text-shadow: 1px 1px 5px rgba(255, 152, 0, 0.5);
+}
+
+
+.span {
+  font-size: 0.9rem;
+  color: var(--bg-dark);
+}
+
+.span a {
+  color: var(--clr);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.span a:hover {
+  color: var(--bg-dark);
+}
+
+body.dark .form {
+  background-color: #2d2d2d;
+}
+
+body.dark .form input {
+  background-color: #444;
+  color: #fff;
+  outline-color: #58bc82;
+}
+
+body.dark .form .label {
+  color: #58bc82;
+}
+
+body.dark .submit {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark .submit:hover {
+  background-color: #58bc82;
+  color: #2d2d2d;
+}
