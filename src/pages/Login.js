@@ -10,7 +10,6 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   useEffect(() => {
@@ -35,12 +34,8 @@ const Login = () => {
 
   return (
     <div className={`login-container ${theme}`}>
-      <div className="welcome-message">
-  Please sign in to continue.
-</div>
+      <div className="welcome-message">Please sign in to continue</div>
 
-
-     
       <label className="theme-switch">
         <input
           type="checkbox"
